@@ -1,0 +1,32 @@
+var VideoListEntry = ({
+  video,
+  handleClick
+}) => /*#__PURE__*/React.createElement("div", {
+  className: "video-list-entry media"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "media-left media-middle"
+}, /*#__PURE__*/React.createElement("img", {
+  className: "media-object",
+  src: video.snippet.thumbnails.default.url,
+  alt: ""
+})), /*#__PURE__*/React.createElement("div", {
+  className: "media-body"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "video-list-entry-title",
+  onClick: () => handleClick(video)
+}, video.snippet.title), /*#__PURE__*/React.createElement("div", {
+  className: "video-list-entry-detail"
+}, video.snippet.description))); // title - snippet.title
+// description = snippet.description
+// img - snippet.thumbnails.url
+// PropTypes tell other developers what `props` a component expects
+// Warnings will be shown in the console when the defined rules are violated
+
+
+VideoListEntry.propTypes = {
+  video: PropTypes.object.isRequired
+}; // In the ES6 spec, files are "modules" and do not share a top-level scope
+// `var` declarations will only exist globally where explicitly defined
+
+export default VideoListEntry;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9jb21wb25lbnRzL1ZpZGVvTGlzdEVudHJ5LmpzeCJdLCJuYW1lcyI6WyJWaWRlb0xpc3RFbnRyeSIsInZpZGVvIiwiaGFuZGxlQ2xpY2siLCJzbmlwcGV0IiwidGh1bWJuYWlscyIsImRlZmF1bHQiLCJ1cmwiLCJ0aXRsZSIsImRlc2NyaXB0aW9uIiwicHJvcFR5cGVzIiwiUHJvcFR5cGVzIiwib2JqZWN0IiwiaXNSZXF1aXJlZCJdLCJtYXBwaW5ncyI6IkFBQ0EsSUFBSUEsY0FBYyxHQUFHLENBQUM7QUFBRUMsRUFBQUEsS0FBRjtBQUFTQyxFQUFBQTtBQUFULENBQUQsa0JBRW5CO0FBQUssRUFBQSxTQUFTLEVBQUM7QUFBZixnQkFDRTtBQUFLLEVBQUEsU0FBUyxFQUFDO0FBQWYsZ0JBQ0U7QUFBSyxFQUFBLFNBQVMsRUFBQyxjQUFmO0FBQThCLEVBQUEsR0FBRyxFQUFFRCxLQUFLLENBQUNFLE9BQU4sQ0FBY0MsVUFBZCxDQUF5QkMsT0FBekIsQ0FBaUNDLEdBQXBFO0FBQXlFLEVBQUEsR0FBRyxFQUFDO0FBQTdFLEVBREYsQ0FERixlQUlFO0FBQUssRUFBQSxTQUFTLEVBQUM7QUFBZixnQkFDRTtBQUFLLEVBQUEsU0FBUyxFQUFDLHdCQUFmO0FBQXdDLEVBQUEsT0FBTyxFQUFFLE1BQU1KLFdBQVcsQ0FBQ0QsS0FBRDtBQUFsRSxHQUE2RUEsS0FBSyxDQUFDRSxPQUFOLENBQWNJLEtBQTNGLENBREYsZUFFRTtBQUFLLEVBQUEsU0FBUyxFQUFDO0FBQWYsR0FBMENOLEtBQUssQ0FBQ0UsT0FBTixDQUFjSyxXQUF4RCxDQUZGLENBSkYsQ0FGRixDLENBYUE7QUFDQTtBQUNBO0FBSUE7QUFDQTs7O0FBQ0FSLGNBQWMsQ0FBQ1MsU0FBZixHQUEyQjtBQUN6QlIsRUFBQUEsS0FBSyxFQUFFUyxTQUFTLENBQUNDLE1BQVYsQ0FBaUJDO0FBREMsQ0FBM0IsQyxDQUlBO0FBQ0E7O0FBQ0EsZUFBZVosY0FBZiIsInNvdXJjZXNDb250ZW50IjpbIlxudmFyIFZpZGVvTGlzdEVudHJ5ID0gKHsgdmlkZW8sIGhhbmRsZUNsaWNrIH0pID0+IChcblxuICA8ZGl2IGNsYXNzTmFtZT1cInZpZGVvLWxpc3QtZW50cnkgbWVkaWFcIj5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cIm1lZGlhLWxlZnQgbWVkaWEtbWlkZGxlXCI+XG4gICAgICA8aW1nIGNsYXNzTmFtZT1cIm1lZGlhLW9iamVjdFwiIHNyYz17dmlkZW8uc25pcHBldC50aHVtYm5haWxzLmRlZmF1bHQudXJsfSBhbHQ9XCJcIiAvPlxuICAgIDwvZGl2PlxuICAgIDxkaXYgY2xhc3NOYW1lPVwibWVkaWEtYm9keVwiPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJ2aWRlby1saXN0LWVudHJ5LXRpdGxlXCIgb25DbGljaz17KCkgPT4gaGFuZGxlQ2xpY2sodmlkZW8pIH0+e3ZpZGVvLnNuaXBwZXQudGl0bGV9PC9kaXY+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInZpZGVvLWxpc3QtZW50cnktZGV0YWlsXCI+e3ZpZGVvLnNuaXBwZXQuZGVzY3JpcHRpb259PC9kaXY+XG4gICAgPC9kaXY+XG4gIDwvZGl2PlxuKTtcblxuLy8gdGl0bGUgLSBzbmlwcGV0LnRpdGxlXG4vLyBkZXNjcmlwdGlvbiA9IHNuaXBwZXQuZGVzY3JpcHRpb25cbi8vIGltZyAtIHNuaXBwZXQudGh1bWJuYWlscy51cmxcblxuXG5cbi8vIFByb3BUeXBlcyB0ZWxsIG90aGVyIGRldmVsb3BlcnMgd2hhdCBgcHJvcHNgIGEgY29tcG9uZW50IGV4cGVjdHNcbi8vIFdhcm5pbmdzIHdpbGwgYmUgc2hvd24gaW4gdGhlIGNvbnNvbGUgd2hlbiB0aGUgZGVmaW5lZCBydWxlcyBhcmUgdmlvbGF0ZWRcblZpZGVvTGlzdEVudHJ5LnByb3BUeXBlcyA9IHtcbiAgdmlkZW86IFByb3BUeXBlcy5vYmplY3QuaXNSZXF1aXJlZFxufTtcblxuLy8gSW4gdGhlIEVTNiBzcGVjLCBmaWxlcyBhcmUgXCJtb2R1bGVzXCIgYW5kIGRvIG5vdCBzaGFyZSBhIHRvcC1sZXZlbCBzY29wZVxuLy8gYHZhcmAgZGVjbGFyYXRpb25zIHdpbGwgb25seSBleGlzdCBnbG9iYWxseSB3aGVyZSBleHBsaWNpdGx5IGRlZmluZWRcbmV4cG9ydCBkZWZhdWx0IFZpZGVvTGlzdEVudHJ5O1xuXG4iXX0=
